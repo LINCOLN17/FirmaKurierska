@@ -15,6 +15,8 @@ namespace FirmaKurierska.Models
 
         public double Prize { get; set; }   
 
+        public string Code { get; set; }
+
         public DateTime DispatchDate { get; set; }
         public DateTime DeliveryDate { get; set; }
     }
