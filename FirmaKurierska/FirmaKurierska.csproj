@@ -201,9 +201,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201804110940275_first.cs" />
-    <Compile Include="Migrations\201804110940275_first.Designer.cs">
-      <DependentUpon>201804110940275_first.cs</DependentUpon>
+    <Compile Include="Migrations\201804180903406_imgProp.cs" />
+    <Compile Include="Migrations\201804180903406_imgProp.Designer.cs">
+      <DependentUpon>201804180903406_imgProp.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -221,6 +221,11 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Codes\ean-13_5012345633206.jpg" />
+    <Content Include="Content\Codes\ean-13_5012345678900.jpg" />
+    <Content Include="Content\Codes\ean-13_5012345699905.jpg" />
+    <Content Include="Content\Images\deliver.jpg" />
+    <Content Include="Content\Images\express-delivery.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -323,8 +328,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201804110940275_first.resx">
-      <DependentUpon>201804110940275_first.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201804180903406_imgProp.resx">
+      <DependentUpon>201804180903406_imgProp.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

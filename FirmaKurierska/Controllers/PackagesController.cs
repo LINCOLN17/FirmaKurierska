@@ -21,13 +21,13 @@ namespace FirmaKurierska.Controllers
         }
 
         // GET: Packages/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(string Code)
         {
-            if (id == null)
+            if (Code == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Package package = db.Packages.Find(id);
+            Package package = db.Packages.First(i => i.Code ==Code);
             if (package == null)
             {
                 return HttpNotFound();

@@ -17,6 +17,8 @@ namespace FirmaKurierska.Models
 
         public string Code { get; set; }
 
+        public byte[] Image { get; set; }
+
         public DateTime DispatchDate { get; set; }
         public DateTime DeliveryDate { get; set; }
     }
