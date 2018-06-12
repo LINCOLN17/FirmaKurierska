@@ -21,6 +21,12 @@ namespace FirmaKurierska.Models
 
         public DateTime DispatchDate { get; set; }
         public DateTime DeliveryDate { get; set; }
+
+        public virtual Courier Courier { get; set; }
+        public virtual Client Client { get; set; }
+        public string RecipientFirstName { get; set; }
+        public string RecipientLastName { get; set; }
+        public string RecipientAddress { get; set; }
     }
 
     public enum PackageStatus

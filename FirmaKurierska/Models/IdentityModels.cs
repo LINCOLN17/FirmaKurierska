@@ -30,15 +30,13 @@ namespace FirmaKurierska.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<FirmaKurierska.Models.Order> Orders { get; set; }
 
-        public System.Data.Entity.DbSet<FirmaKurierska.Models.Car> Cars { get; set; }
+        
 
         public System.Data.Entity.DbSet<FirmaKurierska.Models.Client> Clients { get; set; }
 
         public System.Data.Entity.DbSet<FirmaKurierska.Models.Package> Packages { get; set; }
 
-        public System.Data.Entity.DbSet<FirmaKurierska.Models.WareHouse> WareHouses { get; set; }
 
         public System.Data.Entity.DbSet<FirmaKurierska.Models.Courier> Couriers { get; set; }
 
@@ -50,17 +48,17 @@ namespace FirmaKurierska.Models
 
             // Fluent API opisac jako mechanizm
 
-            modelBuilder.Entity<Car>()
-                        .HasOptional(s => s.Courier)
-                        .WithRequired(c => c.Car);
+            //modelBuilder.Entity<Car>()
+            //            .HasOptional(s => s.Courier)
+            //            .WithRequired(c => c.Car);
 
-            modelBuilder.Entity<Client>()
-                        .HasOptional(s => s.Order)
-                        .WithRequired(c => c.Client);
+            //modelBuilder.Entity<Client>()
+            //            .HasOptional(s => s.Order)
+            //            .WithRequired(c => c.Client);
 
-            modelBuilder.Entity<Courier>()
-                        .HasOptional(s => s.Order)
-                        .WithRequired(c => c.Courier);
+            //modelBuilder.Entity<Courier>()
+            //            .HasOptional(s => s.Order)
+            //            .WithRequired(c => c.Courier);
 
         }
     }

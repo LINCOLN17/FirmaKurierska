@@ -9,14 +9,13 @@ namespace FirmaKurierska.Models
 {
     public class Client
     {
-        [ForeignKey("Order")]
+        [Key]
         public int ID { get; set; }
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }
 
-        public virtual Order Order { get; set; }
 
     }
 }

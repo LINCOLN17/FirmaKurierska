@@ -27,7 +27,7 @@ namespace FirmaKurierska.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Package package = db.Packages.First(i => i.Code ==Code);
+            Package package = db.Packages.First(i => i.Code == Code);
             if (package == null)
             {
                 return HttpNotFound();
@@ -46,7 +46,7 @@ namespace FirmaKurierska.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,PackageStatus,Prize,Code,DispatchDate,DeliveryDate")] Package package)
+        public ActionResult Create([Bind(Include = "ID,PackageStatus,Prize,Code,Image,DispatchDate,DeliveryDate")] Package package)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace FirmaKurierska.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,PackageStatus,Prize,Code,DispatchDate,DeliveryDate")] Package package)
+        public ActionResult Edit([Bind(Include = "ID,PackageStatus,Prize,Code,Image,DispatchDate,DeliveryDate")] Package package)
         {
             if (ModelState.IsValid)
             {
